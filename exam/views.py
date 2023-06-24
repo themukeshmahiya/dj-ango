@@ -6,8 +6,21 @@ from django.http import HttpResponse
 from django.template import loader
 
 def testpaper(request):
+    que = "who developed python ?"
+    a = "mk"
+    b = "tk"
+    c = "pk"
+    d = "dk"
+
+    context = {
+         'Q': que,
+         'A': a,
+         'B': b,
+         'C': c,
+         'D': d,
+    }
     template = loader.get_template('testpaper.html')
-    res = template.render()
+    res = template.render(context,request)
     return HttpResponse(res)
 
 def result(request):
