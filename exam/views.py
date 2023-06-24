@@ -10,14 +10,11 @@ def testpaper(request):
     a = "mk"
     b = "tk"
     c = "pk"
-    d = "dk"
+    d = "lk"
 
     context = {
          'Q': que,
-         'A': a,
-         'B': b,
-         'C': c,
-         'D': d,
+         'options' : [ a,b,c,d ]
     }
     template = loader.get_template('testpaper.html')
     res = template.render(context,request)
